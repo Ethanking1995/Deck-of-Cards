@@ -47,7 +47,7 @@ fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1").then(
             return getHighCard(handB) - getHighCard(handA);
           });
           hands.forEach(hand => console.log(calculate(hand)));
-          console.log('THE WINNING HAND WAS :' hand[0])
+          console.log("THE WINNING HAND WAS :", hands[0]);
         });
       });
     });
