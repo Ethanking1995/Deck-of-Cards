@@ -1,5 +1,7 @@
 # Deck-of-Cards
-Fun little app using the deck of cards API
+Fun little app using the deck of cards API.
+
+
 To get started, run npm install to install the project dependencies.
 
 Navigate to the directory to which the repo is cloned and run node deckofcards.js - this command will use the deckofcards API
