@@ -34,7 +34,7 @@ fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1").then(
             let hand = [];
             for (let j = 0; j <= 4; j++) {
               //print first 5 cards
-              // if (i == 0) console.log(data.cards[i * 5 + j]);
+              if (i == 0) console.log(data.cards[i * 5 + j]);
               //push cards to hand
               hand.push(data.cards[i * 5 + j]);
             }
