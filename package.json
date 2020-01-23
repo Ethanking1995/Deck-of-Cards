@@ -1,0 +1,14 @@
+{
+  "name": "pokerhand",
+  "version": "1.0.0",
+  "description": "uses deckofcardsapi to evaluate winning poker hand",
+  "main": "calculate.js",
+  "scripts": {
+    "test": "jasmine tests.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^3.5.0"
+  }
+}

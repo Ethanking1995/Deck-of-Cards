@@ -15,9 +15,21 @@ let heirarchy = [
   "KING",
   "ACE"
 ];
+
+let suits = ["HEARTS", "CLUBS", "SPADES", "DIAMONDS"];
+let values = new Set(heirarchy);
 function calculate(hand) {
+  //makes evaluating straights much easier
+  hand.sort((a, b) => heirarchy.indexOf(a.value) - heirarchy.indexOf(b.value));
+  //check valid
+  for (let i = 0; i < hand.length; i++) {
+    if (suits.indexOf(hand[i].suit) == -1) return -1;
+    if (heirarchy.indexOf(hand[i].value) == -1) {
+      return -1;
+    }
+  }
+
   if (hand.length !== 5) return -1;
-  //use to break ties
   if (isRoyalFlush(hand)) {
     return 10;
   }
@@ -53,15 +65,14 @@ function calculate(hand) {
 
 function isRoyalFlush(hand) {
   let suit = hand[0].suit;
-  if (hand[0].value !== "10") return false;
   for (let i = 1; i <= 4; i++) {
-    if (hand[i].suit !== suit || heirarchy[i + 9] !== hand[i].value)
+    if (hand[i].suit !== suit || heirarchy[i + 8] !== hand[i].value)
       return false;
   }
   return true;
 }
 function isStraightFlush(hand) {
-  return isStraight(hand) && isFlush(hand);
+  return isStraight(hand) == true && isFlush(hand) == true;
 }
 function isFourKind(hand) {
   let counter = {};
