@@ -17,7 +17,6 @@ let heirarchy = [
 ];
 
 let suits = ["HEARTS", "CLUBS", "SPADES", "DIAMONDS"];
-let values = new Set(heirarchy);
 function calculate(hand) {
   //makes evaluating straights much easier
   hand.sort((a, b) => heirarchy.indexOf(a.value) - heirarchy.indexOf(b.value));
