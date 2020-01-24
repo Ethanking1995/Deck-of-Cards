@@ -1,5 +1,4 @@
-//need a function to calculate the score of a hand, then add score + high card as final score for a tiebreaker
-//winning hand is the hand with the max score
+//used for indexing purposes -makes verifying a straight much easier
 let heirarchy = [
   "2",
   "3",
